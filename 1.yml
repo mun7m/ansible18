@@ -1,0 +1,13 @@
+---
+- host: all
+  become: yes
+  tasks:
+    - name: installing web servers on ubuntu nodes
+      apt:
+        name: apache2
+        state: present
+
+    - name: start webserver
+      service:
+        name: apache2
+        state: started
