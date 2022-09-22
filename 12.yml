@@ -4,24 +4,24 @@
   tasks:
     - name: installing web servers on ubuntu nodes
       apt:
-        name: { { webpackubuntu } }
+        name: "{ { webpackubuntu } }"
         state: present
       when: ansible_os_family =="Debian"
 
     - name: start webserver
       service:
-        name: { { webpackubuntu } }
+        name: "{ { webpackubuntu } } "
         state: started
       when: ansible_os_family =="Debian"
 
     - name: installing webserver on redhat nodes
       yum:
-        name: { { webpackredhat } }
+        name: "{ { webpackredhat } }"
         state: present
       when: ansible_os_family =="RedHat"
 
     - name: start webserver on redhat
       service:
-        name: { { webpackredhat } }
+        name: "{ { webpackredhat } }"
         state: started
       when: ansible_os_family =="RedHat"
