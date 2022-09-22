@@ -10,3 +10,7 @@
 [dbserver]
 172.31.33.144
 
+[webservers:vars]
+var=value
+webpackubuntu=apache222
+webpackredhat=httpd
