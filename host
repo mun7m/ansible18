@@ -12,5 +12,5 @@
 
 [webservers:vars]
 var=value
-webpackubuntu=apache222
+webpackubuntu=apache2
 webpackredhat=httpd
