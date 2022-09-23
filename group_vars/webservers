@@ -1,6 +1,6 @@
 ---
 
-var: value
+var: value 
 webpackubuntu: apache2
 webpackredhat: httpd
 javaonubuntu: openjdk-8-jre
