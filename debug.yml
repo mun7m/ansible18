@@ -1,21 +1,23 @@
---- 
-- hosts: 172.31.33.144 
-  become: yes 
-  tasks: 
-  - name: xcute linux directly 
-    command: hostname -f 
-    register: result 
+---
+- hosts: 172.31.33.144
+  become: yes
+  tasks:
+    - name: xcute linux directly
+      command: hostname -f
+      register: result
 
-  - name: display forst task result 
-   debug: 
-      msg: "{{result}}"
+    - name: display forst task result
+      debug:
+        msg: "{{result}}"
 
-  - name: install git 
-    apt: 
-      name: git 
-      state: present 
+    - name: install git
+      apt:
+        name: git
+        state: present
+        when: result.stderr ==""
 
-  - name: install tree 
-    apt: 
-      name: tree
-      state: present 
+    - name: install tree
+      apt:
+        name: tree
+        state: present
+        when: result.stderr !=""
