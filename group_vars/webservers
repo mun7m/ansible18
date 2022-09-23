@@ -3,3 +3,5 @@
 var: value
 webpackubuntu: apache2
 webpackredhat: httpd
+javaonubuntu: openjdk-8-jre
+javaonredhat: java-1.8.0-openjdk
