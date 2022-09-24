@@ -3,3 +3,11 @@
   become: yes
   tasks:
     - include_tasks: myFile.yml
+    - name: create a folder
+      file:
+        path: /home/ubuntu/myfolder01
+        state: directory
+    - name: i want  to copy file
+      copy:
+        src: staticfile.txt
+        dest: /home/ubuntu/staticfile.txt
