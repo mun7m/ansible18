@@ -11,3 +11,8 @@
       copy:
         src: staticfile.txt
         dest: /home/ubuntu/staticfile.txt
+
+    - name: install apache2
+      apt:
+        name: apache2
+        state: present
