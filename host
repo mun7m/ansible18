@@ -1,6 +1,7 @@
 
 [webservers]
 172.31.26.161
+172.31.22.242 
 
 
 [appserver]
