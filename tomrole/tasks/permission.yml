@@ -1,0 +1,3 @@
+---
+- name: grant tomcat ownrship
+  command: sudo chmod -R u+x /opt/tomcat/bin

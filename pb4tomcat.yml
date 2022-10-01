@@ -1,0 +1,5 @@
+---
+- hosts: appserver
+  become: yes
+  roles:
+    - { role: pb4tomcat, when: ansible_os_family=="Debian" }
